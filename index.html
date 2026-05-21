@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gonçalves & Vaio Associados — Escritório especializado em gestão patrimonial, família e sucessões. Sofisticação técnica a serviço das famílias que constroem legados.">
+<meta name="keywords" content="planejamento sucessório, holding familiar, proteção patrimonial, inventário, advocacia patrimonial, gestão patrimonial, São Paulo">
+<meta name="author" content="Gonçalves & Vaio Associados">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gonçalves & Vaio Associados — Gestão Patrimonial, Família e Sucessões">
+<meta property="og:description" content="Sofisticação técnica a serviço das famílias que constroem legados. Expertise jurídica e financeira integradas em um único escritório.">
+<meta property="og:url" content="https://www.goncalvesevaio.com.br">
+<meta property="og:image" content="https://www.goncalvesevaio.com.br/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gonçalves & Vaio Associados">
+<meta name="twitter:description" content="Sofisticação técnica a serviço das famílias que constroem legados.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%231F2D26'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='28' fill='%23C6A879'>GV</text></svg>">
+<title>Gonçalves & Vaio Associados — Gestão Patrimonial, Família e Sucessões</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--deep-green:#1F2D26;
+--gold:#C6A879;
+--gold-light:#d4bc97;
+--taupe:#D8D2C4;
+--off-white:#F6F4F1;
+--graphite:#333333;
+--white:#ffffff;
+--serif:'Cormorant Garamond',Georgia,serif;
+--sans:'Montserrat',sans-serif;
+--nav-h:80px;
+--section-pad:120px;
+--transition:0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);color:var(--graphite);background:var(--off-white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:var(--sans);border:none;background:none}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--off-white)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);display:flex;align-items:center;padding:0 60px;transition:background var(--transition),box-shadow var(--transition)}
+.nav.scrolled{background:rgba(31,45,38,0.97);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(198,168,121,0.2)}
+.nav-inner{width:100%;max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:14px}
+.nav-monogram{font-family:var(--serif);font-size:28px;font-weight:300;color:var(--gold);letter-spacing:2px;line-height:1}
+.nav-wordmark{display:flex;flex-direction:column}
+.nav-wordmark-name{font-family:var(--serif);font-size:13px;font-weight:500;color:var(--white);letter-spacing:2.5px;text-transform:uppercase}
+.nav-wordmark-sub{font-family:var(--sans);font-size:8px;font-weight:400;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:40px}
+.nav-links a{font-family:var(--sans);font-size:11px;font-weight:500;color:rgba(255,255,255,0.75);letter-spacing:1.5px;text-transform:uppercase;transition:color 0.25s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--deep-green);background:var(--gold);padding:12px 28px;border-radius:1px;transition:all 0.3s}
+.nav-cta:hover{background:var(--gold-light);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer}
+.hamburger span{display:block;width:24px;height:1.5px;background:var(--white);transition:all 0.3s}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mobile-menu{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--deep-green);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;transform:translateX(100%);transition:transform 0.5s cubic-bezier(0.77,0,0.175,1)}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu a{font-family:var(--serif);font-size:32px;font-weight:300;color:var(--white);letter-spacing:2px}
+.mobile-menu a:hover{color:var(--gold)}
+.mobile-menu .nav-cta{font-family:var(--sans);font-size:12px;color:var(--deep-green)}
+
+/* HERO */
+.hero{height:100vh;min-height:700px;position:relative;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0d1a10 0%,var(--deep-green) 45%,#2a3d2e 100%)}
+.hero-noise{position:absolute;inset:0;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")}
+.hero-lines{position:absolute;right:0;top:0;bottom:0;width:50%;overflow:hidden;opacity:0.06}
+.hero-lines svg{width:100%;height:100%}
+.hero-gold-accent{position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,transparent,var(--gold),transparent)}
+.hero-content{position:relative;z-index:2;max-width:1400px;margin:0 auto;padding:0 60px;width:100%}
+.hero-label{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:32px;display:flex;align-items:center;gap:16px;opacity:0;animation:fadeUp 0.8s 0.3s forwards}
+.hero-label::before{content:'';display:block;width:40px;height:1px;background:var(--gold)}
+.hero-title{font-family:var(--serif);font-size:clamp(48px,6vw,88px);font-weight:300;color:var(--white);line-height:1.05;letter-spacing:-1px;margin-bottom:32px;opacity:0;animation:fadeUp 0.9s 0.5s forwards}
+.hero-title em{color:var(--gold);font-style:italic}
+.hero-subtitle{font-family:var(--sans);font-size:14px;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.9;max-width:520px;margin-bottom:56px;letter-spacing:0.5px;opacity:0;animation:fadeUp 0.9s 0.7s forwards}
+.hero-actions{display:flex;align-items:center;gap:32px;opacity:0;animation:fadeUp 0.9s 0.9s forwards}
+.btn-primary{display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--deep-green);background:var(--gold);padding:18px 40px;border-radius:1px;transition:all 0.35s;position:relative;overflow:hidden}
+.btn-primary::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.15);transform:translateX(-100%);transition:transform 0.4s}
+.btn-primary:hover::before{transform:translateX(0)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(198,168,121,0.3)}
+.btn-primary svg{width:16px;height:16px;transition:transform 0.3s}
+.btn-primary:hover svg{transform:translateX(4px)}
+.btn-ghost{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.65);display:flex;align-items:center;gap:10px;transition:color 0.3s}
+.btn-ghost::after{content:'';display:block;width:30px;height:1px;background:currentColor;transition:width 0.3s}
+.btn-ghost:hover{color:var(--gold)}
+.btn-ghost:hover::after{width:50px}
+.hero-scroll{position:absolute;bottom:48px;left:60px;display:flex;align-items:center;gap:12px;opacity:0;animation:fadeIn 1s 1.4s forwards}
+.hero-scroll span{font-family:var(--sans);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35)}
+.scroll-line{width:1px;height:60px;background:linear-gradient(to bottom,transparent,rgba(198,168,121,0.5));position:relative;overflow:hidden}
+.scroll-line::after{content:'';position:absolute;top:-100%;left:0;width:100%;height:100%;background:var(--gold);animation:scrollDown 2s 1.5s infinite}
+@keyframes scrollDown{to{top:100%}}
+.hero-stats{position:absolute;right:60px;bottom:48px;display:flex;gap:48px;opacity:0;animation:fadeUp 0.8s 1.1s forwards}
+.stat-item{text-align:right}
+.stat-number{font-family:var(--serif);font-size:36px;font-weight:300;color:var(--gold);line-height:1}
+.stat-label{font-family:var(--sans);font-size:9px;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:6px}
+
+/* SECTIONS COMMONS */
+section{padding:var(--section-pad) 60px}
+.container{max-width:1400px;margin:0 auto;width:100%}
+.section-label{font-family:var(--sans);font-size:9px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.section-label::before{content:'';display:block;width:32px;height:1px;background:var(--gold)}
+.section-title{font-family:var(--serif);font-size:clamp(36px,4vw,56px);font-weight:300;line-height:1.1;letter-spacing:-0.5px}
+.divider{width:60px;height:1px;background:var(--gold);margin:32px 0}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.8s var(--transition),transform 0.8s var(--transition)}
+.reveal.visible{opacity:1;transform:none}
+
+/* ABOUT */
+.about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center}
+.about-visual{position:relative}
+.about-img-frame{position:relative;aspect-ratio:4/5;overflow:hidden}
+.about-img-frame::before{content:'';position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:1px solid var(--gold);opacity:0.3;z-index:0}
+.about-img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1;filter:grayscale(20%) contrast(1.05)}
+.about-badge{position:absolute;bottom:-32px;right:-32px;z-index:2;background:var(--deep-green);padding:32px;width:180px;text-align:center}
+.about-badge-num{font-family:var(--serif);font-size:52px;font-weight:300;color:var(--gold);line-height:1}
+.about-badge-text{font-family:var(--sans);font-size:9px;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-top:8px;line-height:1.6}
+.about-content{}
+.about-intro{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--deep-green);line-height:1.6;margin-bottom:28px;font-style:italic}
+.about-text{font-family:var(--sans);font-size:14px;font-weight:300;color:#555;line-height:2;margin-bottom:16px}
+.about-pillars{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.pillar{padding:20px 0;border-top:1px solid var(--taupe)}
+.pillar-title{font-family:var(--serif);font-size:16px;font-weight:500;color:var(--deep-green);margin-bottom:6px}
+.pillar-text{font-family:var(--sans);font-size:12px;font-weight:300;color:#777;line-height:1.7}
+
+/* PRACTICE AREAS */
+.areas{background:var(--off-white)}
+.areas-header{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:80px}
+.areas-intro{font-family:var(--sans);font-size:14px;font-weight:300;color:#666;line-height:2}
+.areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--taupe)}
+.area-card{background:var(--white);padding:48px 36px;position:relative;overflow:hidden;cursor:default;transition:background var(--transition)}
+.area-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.4s}
+.area-card:hover{background:var(--deep-green)}
+.area-card:hover::after{transform:scaleX(1)}
+.area-card:hover .area-icon{color:var(--gold)}
+.area-card:hover .area-title{color:var(--white)}
+.area-card:hover .area-text{color:rgba(255,255,255,0.55)}
+.area-card:hover .area-items li{color:rgba(255,255,255,0.55)}
+.area-card:hover .area-items li::before{background:var(--gold)}
+.area-icon{width:40px;height:40px;color:var(--deep-green);margin-bottom:28px;transition:color var(--transition)}
+.area-title{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--deep-green);margin-bottom:16px;transition:color var(--transition);line-height:1.2}
+.area-text{font-family:var(--sans);font-size:12px;font-weight:300;color:#777;line-height:1.8;margin-bottom:20px;transition:color var(--transition)}
+.area-items{list-style:none;margin-top:16px}
+.area-items li{font-family:var(--sans);font-size:11px;font-weight:300;color:#999;line-height:1.6;padding:5px 0;display:flex;align-items:center;gap:10px;transition:color var(--transition)}
+.area-items li::before{content:'';display:block;width:16px;height:1px;background:var(--taupe);flex-shrink:0;transition:background var(--transition)}
+
+/* FOUNDERS */
+.founders{background:var(--deep-green);padding:var(--section-pad) 60px}
+.founders .section-label{color:var(--gold)}
+.founders .section-title{color:var(--white)}
+.founders-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:80px}
+.founder-card{position:relative;overflow:hidden}
+.founder-img-wrap{aspect-ratio:3/4;overflow:hidden;position:relative;margin-bottom:36px}
+.founder-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(31,45,38,0.7) 0%,transparent 50%)}
+.founder-img{width:100%;height:100%;object-fit:cover;object-position:top center;filter:grayscale(30%) contrast(1.05);transition:transform 0.7s var(--transition)}
+.founder-card:hover .founder-img{transform:scale(1.03)}
+.founder-gold-tag{position:absolute;bottom:32px;left:0;background:var(--gold);padding:8px 20px;z-index:2}
+.founder-gold-tag span{font-family:var(--sans);font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--deep-green)}
+.founder-name{font-family:var(--serif);font-size:30px;font-weight:400;color:var(--white);margin-bottom:6px}
+.founder-role{font-family:var(--sans);font-size:10px;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.founder-bio{list-style:none}
+.founder-bio li{font-family:var(--sans);font-size:12px;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.8;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;align-items:flex-start;gap:14px}
+.founder-bio li::before{content:'→';color:var(--gold);flex-shrink:0;font-size:11px;margin-top:2px}
+
+/* CLIENT LOGOS STRIP */
+.clients{background:var(--white);padding:80px 60px;overflow:hidden}
+.clients-label{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:#bbb;text-align:center;margin-bottom:48px}
+.clients-track-wrap{overflow:hidden;position:relative}
+.clients-track-wrap::before,.clients-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2}
+.clients-track-wrap::before{left:0;background:linear-gradient(to right,var(--white),transparent)}
+.clients-track-wrap::after{right:0;background:linear-gradient(to left,var(--white),transparent)}
+.clients-track{display:flex;gap:80px;align-items:center;animation:marquee 28s linear infinite;width:max-content}
+.clients-track:hover{animation-play-state:paused}
+.client-logo{font-family:var(--serif);font-size:16px;font-weight:400;color:#ccc;letter-spacing:2px;white-space:nowrap;transition:color 0.3s}
+.client-logo:hover{color:var(--gold)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* DIFFERENTIALS */
+.differentials{background:var(--off-white)}
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.diff-list{margin-top:48px}
+.diff-item{padding:32px 0;border-bottom:1px solid var(--taupe);display:grid;grid-template-columns:60px 1fr;gap:24px;align-items:start;cursor:default}
+.diff-item:first-child{border-top:1px solid var(--taupe)}
+.diff-num{font-family:var(--serif);font-size:13px;font-weight:300;color:var(--gold);padding-top:4px}
+.diff-title{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--deep-green);margin-bottom:10px}
+.diff-text{font-family:var(--sans);font-size:13px;font-weight:300;color:#777;line-height:1.85}
+.diff-visual{position:relative}
+.diff-card-stack{position:relative;height:500px}
+.diff-card-bg{position:absolute;background:var(--deep-green);top:40px;left:40px;right:0;bottom:0;border-radius:2px}
+.diff-card-front{position:absolute;top:0;left:0;right:40px;bottom:40px;background:var(--white);border:1px solid var(--taupe);padding:48px;display:flex;flex-direction:column;justify-content:space-between;border-radius:2px}
+.diff-card-quote{font-family:var(--serif);font-size:20px;font-weight:300;color:var(--deep-green);line-height:1.6;font-style:italic}
+.diff-card-quote::before{content:'\201C';font-size:64px;color:var(--gold);line-height:0.7;display:block;margin-bottom:16px}
+.diff-card-author{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)}
+.diff-card-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.tag{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--deep-green);border:1px solid var(--taupe);padding:6px 14px}
+
+/* CONTACT */
+.contact{background:var(--deep-green)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
+.contact .section-label{color:var(--gold)}
+.contact .section-title{color:var(--white)}
+.contact .divider{background:var(--gold)}
+.contact-intro{font-family:var(--serif);font-size:20px;font-weight:300;color:rgba(255,255,255,0.65);line-height:1.7;font-style:italic;margin-bottom:48px}
+.contact-channels{display:flex;flex-direction:column;gap:0}
+.channel{padding:28px 0;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;gap:24px;transition:all 0.3s;cursor:pointer}
+.channel:first-child{border-top:1px solid rgba(255,255,255,0.08)}
+.channel-icon{width:44px;height:44px;border:1px solid rgba(198,168,121,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.3s}
+.channel-icon svg{width:18px;height:18px;color:var(--gold)}
+.channel:hover .channel-icon{background:var(--gold);border-color:var(--gold)}
+.channel:hover .channel-icon svg{color:var(--deep-green)}
+.channel-label{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:4px}
+.channel-value{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--white)}
+.channel-sub{font-family:var(--sans);font-size:11px;font-weight:300;color:rgba(255,255,255,0.35);margin-top:2px}
+.contact-form-area{padding-top:80px}
+.form-title{font-family:var(--serif);font-size:28px;font-weight:300;color:var(--white);margin-bottom:40px}
+.form-group{margin-bottom:24px}
+.form-group label{display:block;font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:10px}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);padding:16px 20px;font-family:var(--sans);font-size:13px;font-weight:300;color:var(--white);outline:none;transition:border-color 0.3s;border-radius:1px;appearance:none}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,0.2)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-group textarea{height:120px;resize:none}
+.form-group select option{background:var(--deep-green);color:var(--white)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-submit{display:inline-flex;align-items:center;gap:14px;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--deep-green);background:var(--gold);padding:18px 48px;border-radius:1px;transition:all 0.3s;width:100%;justify-content:center;margin-top:8px}
+.form-submit:hover{background:var(--gold-light);transform:translateY(-1px)}
+.form-note{font-family:var(--sans);font-size:10px;font-weight:300;color:rgba(255,255,255,0.25);text-align:center;margin-top:16px;line-height:1.6}
+
+/* FOOTER */
+.footer{background:#0d1a10;padding:64px 60px 40px}
+.footer-inner{max-width:1400px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+.footer-brand-name{font-family:var(--serif);font-size:22px;font-weight:300;color:var(--white);letter-spacing:1px;margin-bottom:6px}
+.footer-brand-sub{font-family:var(--sans);font-size:9px;font-weight:400;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.footer-brand-text{font-family:var(--sans);font-size:12px;font-weight:300;color:rgba(255,255,255,0.35);line-height:1.9;max-width:300px}
+.footer-col-title{font-family:var(--sans);font-size:9px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:12px}
+.footer-links a{font-family:var(--sans);font-size:12px;font-weight:300;color:rgba(255,255,255,0.4);transition:color 0.3s}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:32px;display:flex;align-items:center;justify-content:space-between}
+.footer-copy{font-family:var(--sans);font-size:11px;font-weight:300;color:rgba(255,255,255,0.25)}
+.footer-social{display:flex;gap:20px}
+.footer-social a{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);transition:color 0.3s;display:flex;align-items:center;gap:8px}
+.footer-social a:hover{color:var(--gold)}
+.footer-opus{font-family:var(--sans);font-size:10px;font-weight:300;color:rgba(255,255,255,0.2);text-align:center;margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.04)}
+
+/* WHATSAPP FLOAT */
+.whatsapp-btn{position:fixed;bottom:36px;right:36px;z-index:900;width:60px;height:60px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.35);transition:all 0.3s;animation:pulse 3s 2s infinite}
+.whatsapp-btn:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(37,211,102,0.5)}
+.whatsapp-btn svg{width:28px;height:28px;color:white}
+.whatsapp-tooltip{position:absolute;right:70px;background:var(--graphite);color:white;font-family:var(--sans);font-size:11px;font-weight:400;padding:8px 14px;border-radius:4px;white-space:nowrap;opacity:0;transform:translateX(8px);transition:all 0.3s;pointer-events:none}
+.whatsapp-btn:hover .whatsapp-tooltip{opacity:1;transform:translateX(0)}
+@keyframes pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.35)}50%{box-shadow:0 4px 32px rgba(37,211,102,0.6)}}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+.nav{padding:0 36px}
+section{padding:80px 36px}
+.about-grid,.diff-grid,.founders-grid,.contact-grid,.footer-top{gap:48px}
+.areas-grid{grid-template-columns:repeat(2,1fr)}
+.hero-content{padding:0 36px}
+.hero-stats{right:36px}
+.hero-scroll{left:36px}
+}
+@media(max-width:900px){
+.nav-links,.nav-cta{display:none}
+.hamburger{display:flex}
+.about-grid,.diff-grid,.contact-grid{grid-template-columns:1fr}
+.areas-header{grid-template-columns:1fr}
+.diff-visual{display:none}
+.founders-grid{grid-template-columns:1fr}
+.footer-top{grid-template-columns:1fr 1fr}
+.hero-stats{display:none}
+.about-badge{right:0;bottom:-20px}
+.form-row{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+:root{--section-pad:64px}
+.nav{padding:0 24px}
+section{padding:64px 24px}
+.hero-content{padding:0 24px}
+.hero-scroll{display:none}
+.hero-title{font-size:40px}
+.areas-grid{grid-template-columns:1fr}
+.about-pillars{grid-template-columns:1fr}
+.footer-top{grid-template-columns:1fr}
+.footer{padding:48px 24px 32px}
+.footer-bottom{flex-direction:column;gap:16px;text-align:center}
+.clients{padding:60px 24px}
+.whatsapp-btn{bottom:24px;right:24px;width:52px;height:52px}
+}
+
+/* IMAGES - using elegant placeholder gradients where real photos would be */
+.about-img-real{background:linear-gradient(135deg,#1a2d20 0%,#2d4a35 50%,#1F2D26 100%);width:100%;height:100%}
+.founder-img-real{background:linear-gradient(160deg,#2a3d2e 0%,#1F2D26 100%);width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.founder-placeholder-text{font-family:var(--serif);font-size:48px;font-weight:300;color:rgba(198,168,121,0.3);letter-spacing:4px}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="mainNav" aria-label="Navegação principal">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Gonçalves &amp; Vaio Associados — Início">
+      <span class="nav-monogram" aria-hidden="true">GV</span>
+      <div class="nav-wordmark">
+        <span class="nav-wordmark-name">Gonçalves &amp; Vaio</span>
+        <span class="nav-wordmark-sub">Associados</span>
+      </div>
+    </a>
+    <div class="nav-links" role="navigation">
+      <a href="#sobre">Sobre</a>
+      <a href="#atuacao">Atuação</a>
+      <a href="#socias">Sócias</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <a href="#contato" class="nav-cta">Agendar Consulta</a>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu de navegação">
+  <a href="#sobre" class="mobile-link">Sobre</a>
+  <a href="#atuacao" class="mobile-link">Atuação</a>
+  <a href="#socias" class="mobile-link">Sócias</a>
+  <a href="#diferenciais" class="mobile-link">Diferenciais</a>
+  <a href="#contato" class="mobile-link">Contato</a>
+  <a href="#contato" class="nav-cta">Agendar Consulta</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" aria-label="Seção principal">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-noise" aria-hidden="true"></div>
+  <div class="hero-lines" aria-hidden="true">
+    <svg viewBox="0 0 800 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <line x1="0" y1="0" x2="800" y2="900" stroke="white" stroke-width="0.5"/>
+      <line x1="100" y1="0" x2="900" y2="900" stroke="white" stroke-width="0.5"/>
+      <line x1="200" y1="0" x2="1000" y2="900" stroke="white" stroke-width="0.5"/>
+      <line x1="300" y1="0" x2="1100" y2="900" stroke="white" stroke-width="0.5"/>
+      <line x1="400" y1="0" x2="1200" y2="900" stroke="white" stroke-width="0.5"/>
+      <line x1="500" y1="0" x2="1300" y2="900" stroke="white" stroke-width="0.5"/>
+      <line x1="600" y1="0" x2="1400" y2="900" stroke="white" stroke-width="0.5"/>
+      <line x1="700" y1="0" x2="1500" y2="900" stroke="white" stroke-width="0.5"/>
+    </svg>
+  </div>
+  <div class="hero-gold-accent" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="hero-label">Gestão Patrimonial · Família · Sucessões</p>
+    <h1 class="hero-title">
+      Protegendo<br>
+      <em>legados</em> que<br>
+      atravessam gerações.
+    </h1>
+    <p class="hero-subtitle">
+      Sofisticação técnica e presença estratégica a serviço das famílias que constroem, protegem e perpetuam patrimônios com integridade e visão de longo prazo.
+    </p>
+    <div class="hero-actions">
+      <a href="#contato" class="btn-primary">
+        Agendar Reunião
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#sobre" class="btn-ghost">Conheça o escritório</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>Explorar</span>
+  </div>
+  <div class="hero-stats" aria-label="Dados do escritório">
+    <div class="stat-item">
+      <div class="stat-number">10<span style="font-size:20px">+</span></div>
+      <div class="stat-label">Anos em<br>Private Banking</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">4</div>
+      <div class="stat-label">Áreas de<br>Expertise</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">R$10M<span style="font-size:16px">+</span></div>
+      <div class="stat-label">Patrimônio<br>Mínimo Atendido</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="sobre">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-img-frame">
+          <!-- Placeholder visual elegante -->
+          <div class="about-img-real" aria-hidden="true" style="display:flex;align-items:center;justify-content:center;">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="72" font-weight="300" fill="rgba(198,168,121,0.25)" letter-spacing="4">GV</text>
+            </svg>
+          </div>
+        </div>
+        <div class="about-badge" aria-label="Mais de 10 anos de experiência">
+          <div class="about-badge-num">10+</div>
+          <div class="about-badge-text">Anos em Private Banking</div>
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="section-label reveal" aria-hidden="true">Quem Somos</p>
+        <h2 class="section-title reveal" style="color:var(--deep-green)">Uma parceria<br>jurídica verdadeiramente<br><em style="font-style:italic;color:var(--gold)">estratégica.</em></h2>
+        <div class="divider reveal" aria-hidden="true"></div>
+        <p class="about-intro reveal">
+          "Somos parceiras na jornada patrimonial das famílias — conselheiras que entendem tanto o direito quanto o mercado financeiro."
+        </p>
+        <p class="about-text reveal">
+          O Gonçalves & Vaio Associados é um escritório de advocacia especializado em gestão patrimonial, família e sucessões, integrante do ecossistema Opus Família & Legado. Acompanhamos cada família em suas necessidades jurídicas mais sensíveis e relevantes.
+        </p>
+        <p class="about-text reveal">
+          Sob a liderança de Marina Gonçalves e Fernanda Vaio, combinamos rigor técnico jurídico com mais de 10 anos de experiência em Private Banking — Itaú, Santander e Votorantim — e assessoria de investimentos. Uma combinação rara e extremamente valiosa no mercado.
+        </p>
+        <div class="about-pillars reveal" aria-label="Pilares do escritório">
+          <div class="pillar">
+            <div class="pillar-title">Sofisticação</div>
+            <div class="pillar-text">Presença e comunicação de alto padrão em cada entrega.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-title">Solidez Técnica</div>
+            <div class="pillar-text">Expertise jurídica, tributária e financeira integradas.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-title">Visão de Longo Prazo</div>
+            <div class="pillar-text">Patrimônios estruturados para atravessar gerações.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-title">Parceria Genuína</div>
+            <div class="pillar-text">Relação próxima e de confiança com cada família.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section class="areas" id="atuacao">
+  <div class="container">
+    <div class="areas-header">
+      <div>
+        <p class="section-label reveal" aria-hidden="true">Áreas de Atuação</p>
+        <h2 class="section-title reveal" style="color:var(--deep-green)">Expertise integrada<br>em um único<br>ponto de excelência.</h2>
+      </div>
+      <div class="reveal">
+        <p class="areas-intro">
+          Atuamos com exclusividade no segmento de gestão patrimonial, família e sucessões — reunindo expertises jurídica, tributária e financeira para famílias de alto patrimônio que exigem o mais alto nível de precisão e discrição.
+        </p>
+        <div style="margin-top:36px">
+          <a href="#contato" class="btn-primary" style="display:inline-flex">
+            Falar com uma especialista
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="areas-grid reveal" role="list">
+      <article class="area-card" role="listitem">
+        <div class="area-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3 class="area-title">Aspectos Societários</h3>
+        <p class="area-text">Organizamos a estrutura societária para proteger o patrimônio, otimizar tributos e preparar o negócio para a sucessão.</p>
+        <ul class="area-items" aria-label="Serviços incluídos">
+          <li>Holdings nacionais e internacionais</li>
+          <li>Governança familiar e corporativa</li>
+          <li>Reorganização societária sucessória</li>
+          <li>Acordos com proteção patrimonial</li>
+        </ul>
+      </article>
+      <article class="area-card" role="listitem">
+        <div class="area-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9,22 9,12 15,12 15,22"/>
+          </svg>
+        </div>
+        <h3 class="area-title">Família, Sucessões e Disputas</h3>
+        <p class="area-text">Apoio integral com a sensibilidade que situações pessoais exigem e a técnica que o patrimônio demanda.</p>
+        <ul class="area-items" aria-label="Serviços incluídos">
+          <li>Testamentos e instrumentos successórios</li>
+          <li>Inventários judiciais e extrajudiciais</li>
+          <li>Pactos antenupciais personalizados</li>
+          <li>Mediação de conflitos familiares</li>
+        </ul>
+      </article>
+      <article class="area-card" role="listitem">
+        <div class="area-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <h3 class="area-title">Tributário e Regulatório</h3>
+        <p class="area-text">Identificamos oportunidades legais de eficiência tributária que preservam e potencializam o patrimônio.</p>
+        <ul class="area-items" aria-label="Serviços incluídos">
+          <li>Planejamento tributário estratégico</li>
+          <li>ITCMD estratégico e redução de base</li>
+          <li>Ativos internacionais e offshore</li>
+          <li>Impactos da Reforma Tributária</li>
+        </ul>
+      </article>
+      <article class="area-card" role="listitem">
+        <div class="area-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 class="area-title">Proteção Patrimonial</h3>
+        <p class="area-text">Protegemos décadas de dedicação na construção de um patrimônio com abordagem robusta, estratégica e juridicamente sólida.</p>
+        <ul class="area-items" aria-label="Serviços incluídos">
+          <li>Separação patrimônio pessoal/empresarial</li>
+          <li>Responsabilidade societária de sócios</li>
+          <li>Liquidez sucessória e ITCMD</li>
+          <li>Estruturas para empresários com sócios</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section class="founders" id="socias">
+  <div class="container">
+    <p class="section-label reveal" aria-hidden="true">Sócias Fundadoras</p>
+    <h2 class="section-title reveal">Duas trajetórias de excelência,<br>uma missão compartilhada.</h2>
+    <div class="founders-grid" role="list">
+      <article class="founder-card reveal" role="listitem">
+        <div class="founder-img-wrap">
+          <div class="founder-img-real" aria-label="Foto de Marina de los Santos Gonçalves">
+            <span class="founder-placeholder-text" aria-hidden="true">MG</span>
+          </div>
+          <div class="founder-gold-tag" aria-hidden="true"><span>Sócia Fundadora</span></div>
+        </div>
+        <h3 class="founder-name">Marina de los Santos Gonçalves</h3>
+        <p class="founder-role">Advogada e Especialista em Wealth Planning</p>
+        <ul class="founder-bio" aria-label="Trajetória profissional">
+          <li>10+ anos em private banking — Itaú, Santander, Votorantim</li>
+          <li>Especialização em planejamento patrimonial, trusts, family office e estruturas offshore</li>
+          <li>Integração única entre o direito e os produtos do mercado financeiro</li>
+          <li>Referência em estruturação de patrimônios internacionais complexos</li>
+        </ul>
+      </article>
+      <article class="founder-card reveal" role="listitem" style="transition-delay:0.15s">
+        <div class="founder-img-wrap">
+          <div class="founder-img-real" aria-label="Foto de Fernanda Vaio">
+            <span class="founder-placeholder-text" aria-hidden="true">FV</span>
+          </div>
+          <div class="founder-gold-tag" aria-hidden="true"><span>Sócia Fundadora</span></div>
+        </div>
+        <h3 class="founder-name">Fernanda Vaio</h3>
+        <p class="founder-role">Especialista em Gestão Patrimonial, Família e Sucessões</p>
+        <ul class="founder-bio" aria-label="Trajetória profissional">
+          <li>Especialização em holdings, pactos antenupciais, testamentos e doações estruturadas</li>
+          <li>Experiência consolidada em mediação de conflitos familiares e governança corporativa</li>
+          <li>Atuação em inventários judiciais e extrajudiciais de alta complexidade</li>
+          <li>Referência em planejamento sucessório para empresas familiares</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT LOGOS STRIP -->
+<div class="clients" aria-label="Ecossistema e parcerias">
+  <p class="clients-label">Integrante do ecossistema · Parceiros de excelência</p>
+  <div class="clients-track-wrap">
+    <div class="clients-track" aria-hidden="true">
+      <span class="client-logo">Opus Família &amp; Legado</span>
+      <span class="client-logo">Private Banking</span>
+      <span class="client-logo">Family Office</span>
+      <span class="client-logo">Planejamento Sucessório</span>
+      <span class="client-logo">Wealth Planning</span>
+      <span class="client-logo">Holding Familiar</span>
+      <span class="client-logo">Proteção Patrimonial</span>
+      <span class="client-logo">Governança Corporativa</span>
+      <!-- duplicated for seamless loop -->
+      <span class="client-logo">Opus Família &amp; Legado</span>
+      <span class="client-logo">Private Banking</span>
+      <span class="client-logo">Family Office</span>
+      <span class="client-logo">Planejamento Sucessório</span>
+      <span class="client-logo">Wealth Planning</span>
+      <span class="client-logo">Holding Familiar</span>
+      <span class="client-logo">Proteção Patrimonial</span>
+      <span class="client-logo">Governança Corporativa</span>
+    </div>
+  </div>
+</div>
+
+<!-- DIFFERENTIALS -->
+<section class="differentials" id="diferenciais">
+  <div class="container">
+    <div class="diff-grid">
+      <div>
+        <p class="section-label reveal" aria-hidden="true">Por Que Nós</p>
+        <h2 class="section-title reveal" style="color:var(--deep-green)">Não somos apenas<br>advogadas. Somos<br><em style="font-style:italic;color:var(--gold)">parceiras estratégicas.</em></h2>
+        <div class="divider reveal" aria-hidden="true"></div>
+        <div class="diff-list reveal" role="list">
+          <div class="diff-item" role="listitem">
+            <span class="diff-num" aria-hidden="true">01</span>
+            <div>
+              <div class="diff-title">Direito + Mercado Financeiro</div>
+              <p class="diff-text">Mais de 10 anos em Private Banking integrados à prática jurídica de alto nível. Uma combinação rara e extremamente valiosa que nenhum escritório generalista consegue oferecer.</p>
+            </div>
+          </div>
+          <div class="diff-item" role="listitem">
+            <span class="diff-num" aria-hidden="true">02</span>
+            <div>
+              <div class="diff-title">Visão Integrada do Patrimônio</div>
+              <p class="diff-text">Jurídico, financeiro e proteção em um único planejamento coeso — sem lacunas, sem conflitos de estratégia entre assessores. Uma só voz, uma só direção.</p>
+            </div>
+          </div>
+          <div class="diff-item" role="listitem">
+            <span class="diff-num" aria-hidden="true">03</span>
+            <div>
+              <div class="diff-title">Foco Exclusivo em Alta Renda</div>
+              <p class="diff-text">Dedicação a famílias com patrimônio acima de R$ 10 milhões. Profundidade, atenção singular e exclusividade que offices generalistas simplesmente não conseguem oferecer.</p>
+            </div>
+          </div>
+          <div class="diff-item" role="listitem">
+            <span class="diff-num" aria-hidden="true">04</span>
+            <div>
+              <div class="diff-title">Neutralidade e Imparcialidade</div>
+              <p class="diff-text">Sem produtos próprios. Sem conflito de interesse. Nossa recomendação serve exclusivamente aos seus objetivos patrimoniais e ao legado da sua família.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="diff-visual reveal">
+        <div class="diff-card-stack">
+          <div class="diff-card-bg" aria-hidden="true"></div>
+          <div class="diff-card-front">
+            <div>
+              <blockquote class="diff-card-quote">
+                Cada família tem uma história única. Cada patrimônio, uma estrutura ideal. O nosso trabalho é encontrá-la — e protegê-la para as próximas gerações.
+              </blockquote>
+            </div>
+            <div>
+              <p class="diff-card-author">Marina Gonçalves &amp; Fernanda Vaio</p>
+              <p style="font-family:var(--sans);font-size:10px;font-weight:300;color:#aaa;margin-top:4px;letter-spacing:1px">Gonçalves &amp; Vaio Associados</p>
+              <div class="diff-card-tags" aria-label="Áreas de atuação" style="margin-top:28px">
+                <span class="tag">Legado</span>
+                <span class="tag">Proteção</span>
+                <span class="tag">Família</span>
+                <span class="tag">Estratégia</span>
+                <span class="tag">Continuidade</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contato">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <p class="section-label reveal" aria-hidden="true">Entre em Contato</p>
+        <h2 class="section-title reveal">Vamos conversar<br>sobre o futuro do<br><em style="font-style:italic;color:var(--gold)">seu legado.</em></h2>
+        <div class="divider reveal" aria-hidden="true"></div>
+        <p class="contact-intro reveal">
+          "Cada família tem uma história única. Cada patrimônio, uma estrutura ideal. Vamos conversar."
+        </p>
+        <div class="contact-channels reveal" role="list">
+          <a href="https://wa.me/5511942510449" class="channel" role="listitem" aria-label="Contato via WhatsApp: (11) 94251-0449" target="_blank" rel="noopener noreferrer">
+            <div class="channel-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="channel-label">WhatsApp</div>
+              <div class="channel-value">(11) 94251-0449</div>
+              <div class="channel-sub">Atendimento direto com as sócias</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/company/PLACEHOLDER_CHANGEME/" class="channel" role="listitem" aria-label="LinkedIn da empresa" target="_blank" rel="noopener noreferrer">
+            <div class="channel-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="channel-label">LinkedIn</div>
+              <div class="channel-value">Gonçalves &amp; Vaio</div>
+              <div class="channel-sub">Insights sobre gestão patrimonial</div>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/PLACEHOLDER_CHANGEME/" class="channel" role="listitem" aria-label="Instagram do escritório" target="_blank" rel="noopener noreferrer">
+            <div class="channel-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <div class="channel-label">Instagram</div>
+              <div class="channel-value">@goncalvesevaio</div>
+              <div class="channel-sub">Conteúdo sobre planejamento patrimonial</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form-area reveal">
+        <h3 class="form-title">Agende uma reunião <em style="font-style:italic;color:var(--gold)">sem compromisso.</em></h3>
+        <form id="contactForm" novalidate aria-label="Formulário de contato">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(11) 9 0000-0000" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="area">Área de interesse</label>
+              <select id="area" name="area" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="societario">Aspectos Societários / Holdings</option>
+                <option value="sucessoes">Família, Sucessões e Disputas</option>
+                <option value="tributario">Tributário e Regulatório</option>
+                <option value="protecao">Proteção Patrimonial</option>
+                <option value="outro">Outro assunto</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Conte brevemente sobre sua situação</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Descreva brevemente o que você precisa..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            Enviar Mensagem
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p class="form-note">Suas informações são tratadas com total sigilo e discrição. Responderemos em até 24 horas.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Gonçalves &amp; Vaio Associados</div>
+        <div class="footer-brand-sub">by Opus · Família &amp; Legado</div>
+        <p class="footer-brand-text">Sofisticação técnica a serviço das famílias que constroem, protegem e perpetuam patrimônios com integridade e visão de longo prazo.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Navegação</div>
+        <ul class="footer-links">
+          <li><a href="#sobre">Sobre o Escritório</a></li>
+          <li><a href="#atuacao">Áreas de Atuação</a></li>
+          <li><a href="#socias">Sócias Fundadoras</a></li>
+          <li><a href="#diferenciais">Nossos Diferenciais</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Atuação</div>
+        <ul class="footer-links">
+          <li><a href="#atuacao">Aspectos Societários</a></li>
+          <li><a href="#atuacao">Família e Sucessões</a></li>
+          <li><a href="#atuacao">Tributário e Regulatório</a></li>
+          <li><a href="#atuacao">Proteção Patrimonial</a></li>
+          <li><a href="#atuacao">Holding Familiar</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contato</div>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/5511942510449" target="_blank" rel="noopener noreferrer">(11) 94251-0449</a></li>
+          <li><a href="mailto:contato@goncalvesevaio.com.br">contato@goncalvesevaio.com.br</a></li>
+          <li><a href="https://www.linkedin.com/company/PLACEHOLDER_CHANGEME/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/PLACEHOLDER_CHANGEME/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Gonçalves &amp; Vaio Associados. Todos os direitos reservados.</p>
+      <div class="footer-social" role="list">
+        <a href="https://www.linkedin.com/company/PLACEHOLDER_CHANGEME/" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://www.instagram.com/PLACEHOLDER_CHANGEME/" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Instagram">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+    <p class="footer-opus">Integrante do ecossistema Opus Família &amp; Legado · www.goncalvesevaio.com.br</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5511942510449?text=Olá, gostaria de agendar uma reunião." class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+  <div class="whatsapp-tooltip">Falar pelo WhatsApp</div>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+(function(){
+'use strict';
+
+// NAV SCROLL
+var nav=document.getElementById('mainNav');
+function onScroll(){
+  if(window.scrollY>60){nav.classList.add('scrolled')}
+  else{nav.classList.remove('scrolled')}
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+// HAMBURGER / MOBILE MENU
+var hamburger=document.getElementById('hamburger');
+var mobileMenu=document.getElementById('mobileMenu');
+var mobileLinks=document.querySelectorAll('.mobile-link, .mobile-menu .nav-cta');
+function closeMenu(){
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  hamburger.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+hamburger.addEventListener('click',function(){
+  var isOpen=mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded',isOpen);
+  document.body.style.overflow=isOpen?'hidden':'';
+});
+mobileLinks.forEach(function(l){l.addEventListener('click',closeMenu)});
+
+// SCROLL REVEAL
+var revealEls=document.querySelectorAll('.reveal');
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:0.12,rootMargin:'0px 0px -60px 0px'});
+revealEls.forEach(function(el){io.observe(el)});
+
+// STAGGERED CHILDREN
+document.querySelectorAll('.areas-grid,.founders-grid').forEach(function(grid){
+  Array.from(grid.children).forEach(function(child,i){
+    child.style.transitionDelay=(i*0.12)+'s';
+  });
+});
+
+// CONTACT FORM
+var form=document.getElementById('contactForm');
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  var btn=form.querySelector('.form-submit');
+  var nome=document.getElementById('nome').value.trim();
+  var email=document.getElementById('email').value.trim();
+  var area=document.getElementById('area').value;
+  if(!nome||!email||!area){
+    btn.textContent='Preencha os campos obrigatórios.';
+    btn.style.background='#a55';
+    setTimeout(function(){
+      btn.innerHTML='Enviar Mensagem <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+      btn.style.background='';
+    },2500);
+    return;
+  }
+  btn.innerHTML='Enviando...';
+  btn.disabled=true;
+  // Build WhatsApp redirect with message
+  var msg=encodeURIComponent('Olá! Me chamo '+nome+' e gostaria de agendar uma reunião.\n\nÁrea de interesse: '+area+'\nE-mail: '+email);
+  setTimeout(function(){
+    btn.innerHTML='Mensagem enviada! ✓';
+    btn.style.background='#2a6b3a';
+    window.open('https://wa.me/5511942510449?text='+msg,'_blank');
+    setTimeout(function(){
+      btn.disabled=false;
+      btn.innerHTML='Enviar Mensagem <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+      btn.style.background='';
+      form.reset();
+    },3000);
+  },1000);
+});
+
+// SMOOTH ANCHOR LINKS
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=a.getAttribute('href');
+    if(id==='#')return;
+    var target=document.querySelector(id);
+    if(target){
+      e.preventDefault();
+      var top=target.getBoundingClientRect().top+window.scrollY-80;
+      window.scrollTo({top:top,behavior:'smooth'});
+    }
+  });
+});
+
+// AREA CARD — keyboard accessible hover
+document.querySelectorAll('.area-card').forEach(function(card){
+  card.setAttribute('tabindex','0');
+  card.addEventListener('keydown',function(e){
+    if(e.key==='Enter'||e.key===' '){
+      window.location.href='#contato';
+    }
+  });
+});
+
+})();
+</script>
+</body>
+</html>
