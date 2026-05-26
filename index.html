@@ -124,6 +124,14 @@ section{padding:var(--section-pad) 60px}
 .about-visual{position:relative}
 .about-img-frame{position:relative;aspect-ratio:4/5;overflow:hidden}
 .about-img-frame::before{content:'';position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:1px solid var(--gold);opacity:0.3;z-index:0}
+/* INSTAGRAM CAROUSEL */
+.ig-carousel-placeholder{width:100%;aspect-ratio:4/5;background:var(--deep-green);border:1px solid rgba(198,168,121,0.12);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.ig-carousel-slides{flex:1;position:relative}
+.ig-slide{position:absolute;inset:0;opacity:0;transition:opacity 0.8s ease;background:linear-gradient(135deg,rgba(31,45,38,0.95) 0%,rgba(31,45,38,0.8) 100%)}
+.ig-slide--active{opacity:1}
+.ig-slide-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px}
+.ig-carousel-footer{padding:16px 20px;display:flex;align-items:center;gap:8px;border-top:1px solid rgba(198,168,121,0.1);background:rgba(31,45,38,0.95)}
+.ig-carousel-footer span{font-family:var(--sans);font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase}
 .about-img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1;filter:grayscale(20%) contrast(1.05)}
 .about-badge{position:absolute;bottom:-32px;right:-32px;z-index:2;background:var(--deep-green);padding:32px;width:180px;text-align:center}
 .about-badge-num{font-family:var(--serif);font-size:52px;font-weight:300;color:var(--gold);line-height:1}
@@ -404,14 +412,40 @@ section{padding:64px 24px}
   <div class="container">
     <div class="about-grid">
       <div class="about-visual reveal">
-        <div class="about-img-frame">
-          <!-- Placeholder visual elegante -->
-          <div class="about-img-real" aria-hidden="true" style="display:flex;align-items:center;justify-content:center;">
-            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="72" font-weight="300" fill="rgba(198,168,121,0.25)" letter-spacing="4">GV</text>
-            </svg>
+        <!-- =============================================================
+             INSTAGRAM CAROUSEL
+             Integração via Behold.so (recomendado) ou API própria.
+
+             PASSOS PARA ATIVAR:
+             1. Acesse https://behold.so e crie uma conta gratuita
+             2. Conecte o perfil @goncalvesevaio
+                ATENÇÃO: a conta deve ser Business ou Creator no Instagram
+             3. Configure o feed: tipo Carrossel, 1 coluna, autoplay 4s
+             4. Copie o Widget ID gerado (formato: XXXXXXXXXXXXXXXXXXXX)
+             5. Substitua BEHOLD_WIDGET_ID abaixo pelo ID real
+             6. Remova o bloco .ig-carousel-placeholder inteiro
+             7. Descomente o bloco behold-widget abaixo
+             =============================================================
+
+             BLOCO ATIVO APÓS CONFIGURAÇÃO — descomente quando tiver o Widget ID:
+             <behold-widget feed-id="BEHOLD_WIDGET_ID"></behold-widget>
+             <script src="https://w.behold.so/widget.js" type="module"></script>
+        -->
+
+        <!-- PLACEHOLDER — remover quando ativar a integração acima -->
+        <div class="ig-carousel-placeholder" role="img" aria-label="Carrossel do Instagram @goncalvesevaio — em breve">
+          <div class="ig-carousel-slides">
+            <div class="ig-slide ig-slide--active"><div class="ig-slide-inner"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(198,168,121,0.35)" stroke-width="1.2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(198,168,121,0.35)" stroke="none"/></svg></div></div>
+            <div class="ig-slide"><div class="ig-slide-inner"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(198,168,121,0.35)" stroke-width="1.2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(198,168,121,0.35)" stroke="none"/></svg></div></div>
+            <div class="ig-slide"><div class="ig-slide-inner"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(198,168,121,0.35)" stroke-width="1.2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(198,168,121,0.35)" stroke="none"/></svg></div></div>
+            <div class="ig-slide"><div class="ig-slide-inner"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(198,168,121,0.35)" stroke-width="1.2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(198,168,121,0.35)" stroke="none"/></svg></div></div>
+          </div>
+          <div class="ig-carousel-footer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="var(--gold)" stroke="none"/></svg>
+            <span>@goncalvesevaio</span>
           </div>
         </div>
+        <!-- /PLACEHOLDER -->
         <div class="about-badge" aria-label="Mais de 10 anos de experiência">
           <div class="about-badge-num">10+</div>
           <div class="about-badge-text">Anos em Private Banking</div>
