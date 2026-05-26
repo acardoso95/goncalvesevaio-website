@@ -462,7 +462,7 @@ section{padding:64px 24px}
           O Gonçalves & Vaio Associados é um escritório de advocacia especializado em gestão patrimonial, família e sucessões, integrante do ecossistema Opus Família & Legado. Acompanhamos cada família em suas necessidades jurídicas mais sensíveis e relevantes.
         </p>
         <p class="about-text reveal">
-          Sob a liderança de Marina Gonçalves e Fernanda Vaio, combinamos rigor técnico jurídico com mais de 10 anos de experiência em Private Banking — Itaú, Santander e Votorantim — e assessoria de investimentos. Uma combinação rara e extremamente valiosa no mercado.
+          Sob a liderança de Marina Gonçalves e Fernanda Vaio, combinamos rigor técnico jurídico com mais de 10 anos de experiência em Private Banking — Itaú, Santander, Bradesco e Votorantim — e assessoria de investimentos. Uma combinação rara e extremamente valiosa no mercado.
         </p>
         <div class="about-pillars reveal" aria-label="Pilares do escritório">
           <div class="pillar">
@@ -533,13 +533,12 @@ section{padding:64px 24px}
             <polyline points="9,22 9,12 15,12 15,22"/>
           </svg>
         </div>
-        <h3 class="area-title">Família, Sucessões e Disputas</h3>
+        <h3 class="area-title">Família e Sucessões</h3>
         <p class="area-text">Apoio integral com a sensibilidade que situações pessoais exigem e a técnica que o patrimônio demanda.</p>
         <ul class="area-items" aria-label="Serviços incluídos">
           <li>Testamentos e instrumentos successórios</li>
           <li>Inventários judiciais e extrajudiciais</li>
           <li>Pactos antenupciais personalizados</li>
-          <li>Mediação de conflitos familiares</li>
         </ul>
       </article>
       <article class="area-card" role="listitem">
@@ -611,7 +610,7 @@ section{padding:64px 24px}
         <p class="founder-role">Especialista em Gestão Patrimonial, Família e Sucessões</p>
         <ul class="founder-bio" aria-label="Trajetória profissional">
           <li>Especialização em holdings, pactos antenupciais, testamentos e doações estruturadas</li>
-          <li>Experiência consolidada em mediação de conflitos familiares e governança corporativa</li>
+          <li>Experiência consolidada em governança corporativa</li>
           <li>Atuação em inventários judiciais e extrajudiciais de alta complexidade</li>
           <li>Referência em planejamento sucessório para empresas familiares</li>
         </ul>
@@ -925,33 +924,99 @@ document.querySelectorAll('.areas-grid,.founders-grid').forEach(function(grid){
 });
 
 // CONTACT FORM
+// Sanitiza texto removendo caracteres que poderiam ser usados para injeção
+// na URL do WhatsApp (URLs, quebras de protocolo, caracteres de controle)
+function sanitizeForWhatsApp(str) {
+  return str
+    .replace(/[\u0000-\u001F\u007F]/g, '') // caracteres de controle
+    .replace(/https?:\/\/\S+/gi, '')        // remove URLs embutidas
+    .replace(/[<>"'`]/g, '')                // remove caracteres HTML
+    .trim()
+    .substring(0, 100);                     // limita tamanho máximo
+}
+
+// Valida formato de e-mail
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+}
+
+// Valida que a área selecionada é um valor esperado (whitelist)
+var AREAS_PERMITIDAS = ['societario','sucessoes','tributario','protecao','outro'];
+
 var form=document.getElementById('contactForm');
 form.addEventListener('submit',function(e){
   e.preventDefault();
   var btn=form.querySelector('.form-submit');
+  var svgArrow='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+
   var nome=document.getElementById('nome').value.trim();
   var email=document.getElementById('email').value.trim();
   var area=document.getElementById('area').value;
+  var mensagem=document.getElementById('mensagem').value.trim();
+
+  // Validação
   if(!nome||!email||!area){
     btn.textContent='Preencha os campos obrigatórios.';
     btn.style.background='#a55';
     setTimeout(function(){
-      btn.innerHTML='Enviar Mensagem <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+      btn.innerHTML='Enviar Mensagem '+svgArrow;
       btn.style.background='';
     },2500);
     return;
   }
+  if(!isValidEmail(email)){
+    btn.textContent='E-mail inválido.';
+    btn.style.background='#a55';
+    setTimeout(function(){
+      btn.innerHTML='Enviar Mensagem '+svgArrow;
+      btn.style.background='';
+    },2500);
+    return;
+  }
+  if(!AREAS_PERMITIDAS.includes(area)){
+    return; // área não reconhecida — aborta silenciosamente
+  }
+
+  // Sanitização de todos os campos antes de montar a URL
+  var nomeSeguro     = sanitizeForWhatsApp(nome);
+  var emailSeguro    = sanitizeForWhatsApp(email);
+  var mensagemSegura = sanitizeForWhatsApp(mensagem);
+
+  // Mapa de labels legíveis para as áreas (evita expor valores internos)
+  var areaLabels = {
+    societario: 'Aspectos Societários / Holdings',
+    sucessoes:  'Família, Sucessões e Disputas',
+    tributario: 'Tributário e Regulatório',
+    protecao:   'Proteção Patrimonial',
+    outro:      'Outro assunto'
+  };
+  var areaLabel = areaLabels[area] || 'Não informado';
+
+  // Monta mensagem segura com campos sanitizados
+  var linhas = [
+    'Olá! Me chamo ' + nomeSeguro + ' e gostaria de agendar uma reunião.',
+    '',
+    'Área de interesse: ' + areaLabel,
+    'E-mail: ' + emailSeguro
+  ];
+  if(mensagemSegura) linhas.push('Mensagem: ' + mensagemSegura);
+
+  var msg = encodeURIComponent(linhas.join('\n'));
+
+  // Validação extra: garante que a URL final aponta apenas para wa.me
+  var waUrl = 'https://wa.me/5511942510449?text=' + msg;
+  if(!waUrl.startsWith('https://wa.me/5511942510449')) return;
+
   btn.innerHTML='Enviando...';
   btn.disabled=true;
-  // Build WhatsApp redirect with message
-  var msg=encodeURIComponent('Olá! Me chamo '+nome+' e gostaria de agendar uma reunião.\n\nÁrea de interesse: '+area+'\nE-mail: '+email);
+
   setTimeout(function(){
     btn.innerHTML='Mensagem enviada! ✓';
     btn.style.background='#2a6b3a';
-    window.open('https://wa.me/5511942510449?text='+msg,'_blank');
+    window.open(waUrl,'_blank','noopener,noreferrer');
     setTimeout(function(){
       btn.disabled=false;
-      btn.innerHTML='Enviar Mensagem <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+      btn.innerHTML='Enviar Mensagem '+svgArrow;
       btn.style.background='';
       form.reset();
     },3000);

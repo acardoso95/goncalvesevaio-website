@@ -1,19 +1,61 @@
 [build]
   publish = "."
 
+# ============================================================
+# SECURITY HEADERS — aplicados a todas as rotas
+# ============================================================
 [[headers]]
   for = "/*"
   [headers.values]
+    # Impede clickjacking (iframe embedding por terceiros)
     X-Frame-Options = "DENY"
+
+    # Impede MIME-type sniffing
     X-Content-Type-Options = "nosniff"
+
+    # Controla informações de referência enviadas a terceiros
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+    # Força HTTPS por 1 ano, inclui subdomínios
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+    # Desabilita features de browser desnecessárias para o site
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+
+    # Proteção XSS legada (browsers antigos)
+    X-XSS-Protection = "1; mode=block"
+
+    # Content Security Policy
+    # Fontes permitidas: Google Fonts, Behold.so (carrossel Instagram)
+    # ATENÇÃO: ao ativar o Behold.so, o domínio já está liberado abaixo.
+    # Se usar outro serviço de embed, adicione o domínio em script-src e frame-src.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://w.behold.so; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'  https://www.goncalvesevaio.com.br https://scontent.cdninstagram.com https://*.cdninstagram.com https://*.fbcdn.net; connect-src 'self' https://w.behold.so; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"
+
+# ============================================================
+# CACHE — imagens estáticas (1 ano, imutável)
+# ============================================================
 [[headers]]
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# ============================================================
+# CACHE — HTML nunca cacheado (sempre busca versão mais recente)
+# ============================================================
 [[headers]]
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# ============================================================
+# CACHE — assets JS/CSS (cache agressivo)
+# ============================================================
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
